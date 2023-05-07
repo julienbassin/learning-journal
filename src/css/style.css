@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap");
 *,
 *::before,
 *::after {
@@ -11,15 +11,140 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Smythe", sans-serif;
+:root {
+  --header-height: 60px;
+  --footer-height: 105px;
 }
 
-header h1 {
-  font-size: 39px;
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: calc(100vh - (var(--footer-height) + var(--header-height)));
+  font-size: 16px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(309px, 1fr));
+}
+
+header {
+  height: 60px;
+  padding: 0 1em;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto";
+  color: #0E0E0E;
+}
+header img {
+  width: 1.5em;
+  height: 1.5em;
+}
+header p {
+  font-size: 0.847rem;
+  font-weight: bold;
+  margin-right: auto;
+}
+header a {
+  font-family: "Source Sans Pro";
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #090909;
+  line-height: 0.943rem;
+  padding-left: 0.8em;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  grid-column: 1/-1;
+  width: auto;
+  height: 18rem;
+  background-image: url("../img/article-image-hero.png");
+  color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero .hero-date {
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.hero .hero-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+.hero .hero-description {
+  font-style: normal;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 24px;
-  margin-bottom: 0.5em;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.blog {
+  padding: 1em;
+}
+.blog .blog-image {
+  width: 100%;
+  height: 14.5rem;
+  border-radius: 0.3em;
+  object-fit: cover;
+}
+.blog .blog-date {
+  font-size: 0.886rem;
+  font-weight: 400;
+  line-height: 17.82px;
+  padding: 0.8em 0;
+}
+.blog .blog-title {
+  font-size: 1.5rem;
+  padding: 0 0 0.4em 0;
+}
+.blog .blog-description {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 125%;
+  color: #505050;
+}
+
+.hidden {
+  display: none;
+}
+
+.read-more {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 2em 0;
+  text-align: center;
+  text-decoration: underline;
+  color: #000000;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 6.563rem;
+  background-color: #202020;
+  color: #FFFFFF;
+}
+footer p,
+footer label {
+  font-size: 0.75rem;
+}
+footer p {
+  color: #ECECEC;
+  font-weight: bold;
+}
+footer label {
+  color: #D7D7D7;
 }
 
 /*# sourceMappingURL=style.css.map */
